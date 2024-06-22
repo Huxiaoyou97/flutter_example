@@ -45,6 +45,8 @@ dependencies:
   cupertino_icons: ^1.0.6
   # 屏幕参数适配 https://pub.flutter-io.cn/packages/flutter_screenutil
   flutter_screenutil: ^5.9.0
+  # 后退按钮拦截器 https://pub.flutter-io.cn/packages/back_button_interceptor
+  back_button_interceptor: ^6.0.2
 
 dev_dependencies:
   flutter_test:
@@ -57,3 +59,5 @@ flutter:
   assets:
     - assets/images/
     - assets/images/tab/
+    - assets/images/common/
+    - assets/images/common/empty/

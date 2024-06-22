@@ -96,7 +96,7 @@ class ThemeProvider extends ChangeNotifier {
       case _themeDark:
         return ThemeMode.dark;
       default:
-        return ThemeMode.system;
+        return ThemeMode.system; // 默认跟随系统
     }
   }
 

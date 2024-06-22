@@ -1,17 +1,30 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_demo01/base_appbar.dart';
+import 'package:flutter_demo01/common/widgets/xb_text_list.dart';
+import 'package:flutter_demo01/routes/xb_nav_utils.dart';
 
-class HomePage extends StatefulWidget {
+final List titleData = [
+  'toast',
+];
+
+final List routeData = [
+  'ToastTestPage',
+];
+
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text("Home"),
+    return Scaffold(
+      appBar: BaseAppBar('首页', leftWidget: Container()),
+      body: XbTextList(
+        dataArr: titleData,
+        callBack: (index, str) {
+          XbNavUtils.pushNamed(context, routeData[index]);
+        },
+      ),
     );
   }
 }

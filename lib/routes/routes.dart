@@ -1,5 +1,6 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_demo01/example/example_router.dart';
 import 'package:flutter_demo01/pages/login/login_router.dart';
 import 'package:flutter_demo01/pages/main_router.dart';
 import 'package:flutter_demo01/routes/router_init.dart';
@@ -45,7 +46,7 @@ class Routes {
 
     // 各自路由由各自模块管理，统一在此添加初始化
     _listRouter.add(LoginRouter());
-    // _listRouter.add(DemosRouter());
+    _listRouter.add(ExampleRouter());
     _listRouter.add(MainRouter());
 
     /// 初始化路由

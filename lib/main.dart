@@ -81,6 +81,13 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   @override
+  void initState() {
+    super.initState();
+
+    Routes.initRoutes();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final Widget app = MultiProvider(
         providers: [
