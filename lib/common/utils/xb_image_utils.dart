@@ -1,7 +1,6 @@
-///  jh_image_utils.dart
-///
-///  Created by iotjin on 2020/03/18.
-///  description:  图片加载工具类
+/// colors.dart
+/// author: Huxiaoyou
+/// description:  图片加载工具类
 
 // ignore_for_file: unused_import
 

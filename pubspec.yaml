@@ -47,6 +47,10 @@ dependencies:
   flutter_screenutil: ^5.9.0
   # 后退按钮拦截器 https://pub.flutter-io.cn/packages/back_button_interceptor
   back_button_interceptor: ^6.0.2
+  # 监测网络状态 https://pub.flutter-io.cn/packages/connectivity_plus
+  connectivity_plus: ^5.0.2
+  # 网络请求 https://pub.flutter-io.cn/packages/dio
+  dio: ^5.4.1
 
 dev_dependencies:
   flutter_test:

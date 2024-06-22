@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demo01/common/utils/xb_device_utils.dart';
 import 'package:flutter_demo01/common/utils/xb_status_bar_utils.dart';
 import 'package:flutter_demo01/common/utils/xb_storage_utils.dart';
+import 'package:flutter_demo01/http/http_utils.dart';
+import 'package:flutter_demo01/http/log_utils.dart';
 import 'package:flutter_demo01/pages/login/login_page.dart';
 import 'package:flutter_demo01/provider/theme_provider.dart';
 import 'package:flutter_demo01/routes/app_route_observer.dart';
@@ -84,6 +86,8 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
 
+    LogUtils.init();
+    HttpUtils.initDio();
     Routes.initRoutes();
   }
 

@@ -6,10 +6,12 @@ import 'package:flutter_demo01/routes/xb_nav_utils.dart';
 
 final List titleData = [
   'toast',
+  '网络请求',
 ];
 
 final List routeData = [
   'ToastTestPage',
+  'HttpTestPage',
 ];
 
 class HomePage extends StatelessWidget {

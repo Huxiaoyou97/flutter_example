@@ -1,7 +1,6 @@
-///  base_web_view.dart
-///
-///  Created by iotjin on 2020/03/27.
-///  description:  WebView基类
+/// colors.dart
+/// author: Huxiaoyou
+/// description:  WebView基类
 
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';

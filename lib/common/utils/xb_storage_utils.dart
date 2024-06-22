@@ -89,7 +89,7 @@ class XbAESStorageUtils {
 }
 
 /// 数据存储（不使用AES加密）
-class JhStorageUtils {
+class XbStorageUtils {
   /// 存 String
   static Future<bool>? saveString(String key, String value) {
     return SpUtil.putString(key, value);
