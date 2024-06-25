@@ -68,7 +68,6 @@ class _XbSetCellState extends State<XbSetCell> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
     _hiddenArrow = widget.hiddenArrow;
@@ -88,7 +87,7 @@ class _XbSetCellState extends State<XbSetCell> {
     var textStyle = TextStyle(fontSize: _textFontSize, color: textColor);
     var lineColor = KColors.dynamicColor(context, KColors.kFormLineColor, KColors.kFormLineDarkColor);
 
-    // 设置的颜色优先级高于暗黑模式
+    // 设置的颜色优先级高于主题模式
     bgColor = widget.bgColor ?? bgColor;
     titleStyle = widget.titleStyle ?? titleStyle;
     textStyle = widget.textStyle ?? textStyle;

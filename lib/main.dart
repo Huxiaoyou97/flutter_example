@@ -9,6 +9,7 @@ import 'package:flutter_demo01/common/utils/xb_storage_utils.dart';
 import 'package:flutter_demo01/http/http_utils.dart';
 import 'package:flutter_demo01/http/log_utils.dart';
 import 'package:flutter_demo01/pages/login/login_page.dart';
+import 'package:flutter_demo01/provider/socket_provider.dart';
 import 'package:flutter_demo01/provider/theme_provider.dart';
 import 'package:flutter_demo01/routes/app_route_observer.dart';
 import 'package:flutter_demo01/routes/routes.dart';
@@ -95,6 +96,7 @@ class _MyAppState extends State<MyApp> {
     final Widget app = MultiProvider(
         providers: [
           ChangeNotifierProvider(create: (_) => ThemeProvider()),
+          ChangeNotifierProvider(create: (_) => WebSocketProvider()),
         ],
         child: Consumer<ThemeProvider>(
           builder: (_, ThemeProvider provider, __) {

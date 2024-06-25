@@ -2,6 +2,7 @@
 
 import 'dart:convert';
 import 'package:fluro/fluro.dart';
+import 'package:flutter_demo01/example/socket_test.dart';
 import 'package:flutter_demo01/example/theme_test.dart';
 import 'package:flutter_demo01/routes/router_init.dart';
 
@@ -17,5 +18,6 @@ class ExampleRouter implements IRouterProvider {
     router.define('ToastTestPage', handler: Handler(handlerFunc: (_, __) => const ToastTestPage()));
     router.define('HttpTestPage', handler: Handler(handlerFunc: (_, __) => const HttpTestPage()));
     router.define('ThemeTestPage', handler: Handler(handlerFunc: (_, __) => const ThemeTestPage()));
+    router.define('SocketTestPage', handler: Handler(handlerFunc: (_, __) => const SocketTestPage()));
   }
 }

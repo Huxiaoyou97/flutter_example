@@ -8,12 +8,14 @@ final List titleData = [
   'toast',
   '网络请求',
   '主题设置',
+  'Socket',
 ];
 
 final List routeData = [
   'ToastTestPage',
   'HttpTestPage',
   'ThemeTestPage',
+  'SocketTestPage',
 ];
 
 class HomePage extends StatelessWidget {

@@ -51,6 +51,8 @@ dependencies:
   connectivity_plus: ^5.0.2
   # 网络请求 https://pub.flutter-io.cn/packages/dio
   dio: ^5.4.1
+  # webSocket https://pub.flutter-io.cn/packages/web_socket_channel
+  web_socket_channel: ^2.1.0
 
 dev_dependencies:
   flutter_test:
