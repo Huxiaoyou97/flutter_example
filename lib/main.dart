@@ -3,7 +3,6 @@
 import 'package:bot_toast/bot_toast.dart';
 import 'package:english_words/english_words.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_demo01/common/utils/xb_device_utils.dart';
 import 'package:flutter_demo01/common/utils/xb_status_bar_utils.dart';
 import 'package:flutter_demo01/common/utils/xb_storage_utils.dart';

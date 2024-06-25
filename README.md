@@ -19,6 +19,7 @@
 * Material3适配
 * 组件
   * BaseAppBar、BaseTabBar、BaseWebView
+  * XbForm 表单录入(单行多行输入样式、选择样式)
   * 弹框(toast)
   * 骨架屏
 * 工具类
