@@ -21,7 +21,6 @@ mixin WebSocketMixin<T extends StatefulWidget> on State<T> {
   @override
   void dispose() {
     print("离开页面,断开连接");
-    print("socket provider $_webSocketProvider");
     _webSocketProvider?.disconnect();
     super.dispose();
   }
