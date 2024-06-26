@@ -11,12 +11,16 @@ import 'error_handle.dart';
 import 'log_utils.dart';
 
 // default token
-const String defaultToken = '';
+const String defaultToken = 'zmhmp/IfivRcja50iMG94S4L8YtUIJyr+5WqVbpJ4+hsw36RhCKEAs2p1iRfCf94L3G6Vi5E7wcUkYVm07qxq8ksIogJbKqQiKua/bnibvQ=';
 // const String kRefreshTokenUrl = APIS.refreshToken;
 
 String getToken() {
-  var token = XbStorageUtils.getString('accessToken') ?? defaultToken;
-  return token;
+  var token = XbStorageUtils.getString('accessToken');
+  if (token?.isNotEmpty == true) {
+    return token!;
+  } else {
+    return defaultToken;
+  }
 }
 
 void setToken(accessToken) {
@@ -41,6 +45,7 @@ class AuthInterceptor extends Interceptor {
 
     if (!noNeedToken.contains(options.path)) {
       final String accessToken = getToken();
+      print("token: $accessToken");
       if (accessToken.isNotEmpty) {
         options.headers['Authorization'] = 'Bearer $accessToken';
       }

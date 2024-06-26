@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
+import 'package:flutter_demo01/common/widgets/base_refresh_view.dart';
 import 'package:flutter_demo01/common/widgets/xb_badge.dart';
 import 'package:flutter_demo01/pages/tabbar/home_page.dart';
 import 'package:flutter_demo01/pages/tabbar/news_page.dart';
@@ -45,7 +46,7 @@ class _BaseTabBarState extends State<BaseTabBar> {
     super.initState();
 
     // 设置EasyRefresh的默认样式
-    // initEasyRefresh();
+    initEasyRefresh();
   }
 
   @override

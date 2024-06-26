@@ -258,8 +258,8 @@ class BaseRefreshViewState<T extends BaseRefreshView> extends State<T> {
       Fail? fail}) {
     HttpUtils.request(method, url, params, loadingText: loadingText,
         success: (res) {
-      // TODO: 项目中分页都用的同一个接口，所以上拉加载完成状态判断按同一种方式处理
-      var tempData = res['data'];
+      // 项目中分页都用的同一个接口，所以上拉加载完成状态判断按同一种方式处理
+      var tempData = res['data']['list'];
       setState(() {
         _isShowShimmer = false;
         _isNetWorkError = false;

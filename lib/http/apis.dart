@@ -7,4 +7,7 @@ class APIS {
 
   /// 登录
   static const String login = '/client/login';
+
+  /// GPTS
+  static const String gpts = '/client/gpts/list';
 }

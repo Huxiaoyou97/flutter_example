@@ -97,7 +97,7 @@ class HttpUtils {
     DioUtils.instance.request(method, url, data: data, queryParameters: queryParameters, onSuccess: (result) {
       if (!LogUtils.inProduction && isOpenLog) {
         print('---------- HttpUtils response ----------');
-        print(result);
+        // print(result);
       }
       if (loadingText != null && loadingText.isNotEmpty) {
         XbProgressHUD.hide();

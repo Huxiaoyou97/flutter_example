@@ -9,6 +9,7 @@ final List titleData = [
   '网络请求',
   '主题设置',
   'Socket',
+  'BaseGridView - 骨架屏',
 ];
 
 final List routeData = [
@@ -16,6 +17,7 @@ final List routeData = [
   'HttpTestPage',
   'ThemeTestPage',
   'SocketTestPage',
+  'BaseGridViewShimmerTestPage',
 ];
 
 class HomePage extends StatelessWidget {
