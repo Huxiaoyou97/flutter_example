@@ -161,6 +161,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.8"
+  date_format:
+    dependency: "direct main"
+    description:
+      name: date_format
+      sha256: "8e5154ca363411847220c8cbc43afcf69c08e8debe40ba09d57710c25711760c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.7"
   dbus:
     dependency: transitive
     description:
@@ -283,6 +291,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_picker_plus:
+    dependency: "direct main"
+    description:
+      name: flutter_picker_plus
+      sha256: "24f7c21b921084c4a7803eeb0d7f74a7672cfb2fcad632f0dc637924e9010402"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.0"
   flutter_screenutil:
     dependency: "direct main"
     description:

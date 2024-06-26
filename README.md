@@ -19,8 +19,12 @@
 * Material3适配
 * 组件
   * BaseAppBar、BaseTabBar、BaseWebView、BaseRefreshView
-  * XbForm 表单录入(单行多行输入样式、选择样式)
-  * 弹框(toast)
+  * XbForm 表单录入(单行多行输入样式、选择样式、设置样式、登录样式)
+  * 弹框(中间、底部、toast、dialog、自定义弹框)
+  * 时间、日期、单列、多列、底部单选/多选选择器
+  * 级联选择器（多维数组或树形结构、支持搜索）
+  * 文本高亮显示指定文本
+  * 空数据和网络异常
   * 骨架屏
   * Websocket Base组件
 * 工具类
@@ -35,3 +39,4 @@
   * 防抖/节流
   * 文字列表
   * WebSocket 封装(断线重连、心跳检测、消息发送)
+  * 退出APP/跳转应用商店

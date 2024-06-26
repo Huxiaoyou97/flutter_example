@@ -61,6 +61,10 @@ dependencies:
   shimmer: ^3.0.0
   # url打开工具 https://pub.flutter-io.cn/packages/url_launcher
   url_launcher: ^6.2.5
+  # 底部弹出 日期选择器 单列多列  https://pub.flutter-io.cn/packages/flutter_picker_plus
+  flutter_picker_plus : ^1.2.0
+  # 时间格式转换 https://pub.flutter-io.cn/packages/date_format
+  date_format: ^2.0.7
 
 dev_dependencies:
   flutter_test:
