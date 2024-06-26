@@ -53,6 +53,10 @@ dependencies:
   dio: ^5.4.1
   # webSocket https://pub.flutter-io.cn/packages/web_socket_channel
   web_socket_channel: ^2.1.0
+  # 下拉刷新(flutter_easyrefresh 3.0版本) https://pub.flutter-io.cn/packages/easy_refresh
+  easy_refresh: ^3.3.4
+  # 加载动画 https://pub.flutter-io.cn/packages/flutter_spinkit
+  flutter_spinkit: ^5.2.1
 
 dev_dependencies:
   flutter_test:

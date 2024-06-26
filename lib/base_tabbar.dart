@@ -7,6 +7,8 @@ import 'package:flutter_demo01/pages/tabbar/profile_page.dart';
 import 'package:flutter_demo01/pages/tabbar/vip_page.dart';
 import 'package:flutter_demo01/provider/tabbar_provider.dart';
 import 'package:flutter_demo01/provider/theme_provider.dart';
+import 'package:flutter_demo01/widgets/tabbar/tabIcon_data.dart';
+import 'package:flutter_demo01/widgets/tabbar/xb_tabbar.dart';
 import 'package:provider/provider.dart';
 
 import 'common/utils/xb_image_utils.dart';
@@ -30,17 +32,12 @@ class _BaseTabBarState extends State<BaseTabBar> {
 
   final PageController _pageController = PageController();
 
+  /// 图标
+  final List<TabIconData> iconList = TabIconData.tabIconsList;
+
   bool _isAnimating = true;
   String _currentText = '';
 
-  List<BottomNavigationBarItem> getBottomTabs(iconColor) {
-    return [
-      _createItem("首页", 'tab/nav_tab_1', iconColor),
-      _createItem("新闻", 'tab/nav_tab_2', iconColor),
-      _createItem("VIP", 'tab/nav_tab_3', iconColor, showBadge: true),
-      _createItem("我的", 'tab/nav_tab_4', iconColor),
-    ];
-  }
 
   @override
   void initState() {
@@ -63,13 +60,6 @@ class _BaseTabBarState extends State<BaseTabBar> {
   }
 
   _body() {
-    // TODO: 通过ThemeProvider进行主题管理
-    final provider = Provider.of<ThemeProvider>(context);
-    var bgColor = KColors.dynamicColor(context, KColors.kTabBarBgColor, KColors.kTabBarBgDarkColor);
-    var normalTextColor = KColors.dynamicColor(context, KColors.kTabBarNormalTextColor, KColors.kTabBarNormalTextDarkColor);
-    var selectTextColor = KColors.dynamicColor(context, provider.getThemeColor(), KColors.kThemeColor);
-    var selectIconColor = KColors.dynamicColor(context, provider.getThemeColor(), KColors.kThemeColor);
-
     /// 保持页面状态的几种方式 https://blog.csdn.net/iotjin/article/details/126870716
     /// 如果需要在某个页面跳转返回到tabbar的指定页面，Provider create 添加到main.dart，否则写在BaseTabBar中
     /// 通过 PageView + AutomaticKeepAliveClientMixin 保持页面状态（进到哪个页面，哪个页面开始初始化）
@@ -90,38 +80,25 @@ class _BaseTabBarState extends State<BaseTabBar> {
               splashColor: Colors.transparent,
               // splashFactory: InkSplash.splashFactory,
             ),
-            child: BottomNavigationBar(
-              backgroundColor: bgColor,
-              // 未选中颜色
-              unselectedItemColor: normalTextColor,
-              // 选中颜色,与fixedColor不能同时设置
-              // selectedItemColor: selectColor,
-              // 选中的颜色
-              fixedColor: selectTextColor,
-              unselectedFontSize: _fontSize,
-              selectedFontSize: _fontSize,
-              // 配置底部BaseTabBar可以有多个按钮
-              type: BottomNavigationBarType.fixed,
-              items: getBottomTabs(selectIconColor),
-              // 配置对应的索引值选中
-              currentIndex: provider.currentIndex,
-              // 配置对应的索引值选中
-              onTap: (int index) {
-                setState(() {
-                  // 改变状态
-                  provider.currentIndex = index;
-                  _pageController.jumpToPage(index);
-                  // 动画相关
-                  _isAnimating = true;
-                  _currentText = getBottomTabs(selectIconColor)[index].label!;
-                });
-              },
-            ),
+            child: XbBottomAppBar(selectedCallback: (position) => onClickBottomBar(position, provider), iconList: iconList)
           );
         }),
       ),
     );
   }
+
+  void onClickBottomBar(int index, TabbarProvider tabbarProvider) {
+    if (!mounted) return;
+
+    debugPrint('longer   点击了 >>> $index');
+    setState(() {
+      tabbarProvider.currentIndex = index;
+      _pageController.jumpToPage(index);
+      // 动画相关
+      // _isAnimating = true;
+    });
+  }
+
 
   _createItem(String label, String imgPath, iconColor, {bool showBadge = false}) {
     var item = BottomNavigationBarItem(

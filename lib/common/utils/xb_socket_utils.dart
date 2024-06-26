@@ -56,6 +56,12 @@ class XbSocketUtils {
     );
 
     _startHeartbeat();
+
+    // 如果正在重连,取消重连定时器
+    if (_isReconnecting) {
+      _reconnectTimer?.cancel();
+      _isReconnecting = false;
+    }
   }
 
   /// 发送消息
@@ -79,6 +85,7 @@ class XbSocketUtils {
 
   /// 连接关闭时的处理
   void _onDone() {
+    print("socket close done $_isDisconnecting");
     _isConnected = false;
     if (!_isDisconnecting) {
       _reconnect();
@@ -87,6 +94,7 @@ class XbSocketUtils {
 
   /// 连接错误时的处理
   void _onError(error) {
+    print("socket close error $error ---- $_isDisconnecting");
     _isConnected = false;
     if (!_isDisconnecting) {
       _reconnect();
@@ -97,6 +105,7 @@ class XbSocketUtils {
   void _startHeartbeat() {
     _heartbeatTimer?.cancel();
     _heartbeatTimer = Timer.periodic(heartbeatInterval, (timer) {
+      print("触发 ping $_heartbeatTimer --- $_isConnected");
       if (_isConnected) {
         send('ping');
       }
@@ -108,9 +117,11 @@ class XbSocketUtils {
     print("socket close $_heartbeatTimer");
     _heartbeatTimer?.cancel();
     _reconnectTimer?.cancel();
-    _channel?.sink.close(status.normalClosure);
     _isConnected = false;
     _isReconnecting = false;
+    _isDisconnecting = true;
+    print("socket disconnect $_isDisconnecting");
+    _channel?.sink.close(status.normalClosure);
   }
 
   /// 尝试重连
