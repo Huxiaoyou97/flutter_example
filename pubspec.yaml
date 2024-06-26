@@ -59,6 +59,8 @@ dependencies:
   flutter_spinkit: ^5.2.1
   # 骨架屏 https://pub.flutter-io.cn/packages/shimmer
   shimmer: ^3.0.0
+  # url打开工具 https://pub.flutter-io.cn/packages/url_launcher
+  url_launcher: ^6.2.5
 
 dev_dependencies:
   flutter_test:

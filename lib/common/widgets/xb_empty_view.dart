@@ -1,7 +1,6 @@
-///  Xb_empty_view.dart
-///
-///  Created by iotjin on 2022/09/21.
-///  description: 空数据组件。暂无数据 和 网络加载失败两种
+/// xb_empty_view.dart
+/// author: Huxiaoyou
+/// description: 空数据组件。暂无数据 和 网络加载失败两种
 
 import 'package:flutter/material.dart';
 import 'package:flutter_demo01/configs/colors.dart';

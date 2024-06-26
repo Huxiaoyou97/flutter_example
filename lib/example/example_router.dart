@@ -4,6 +4,8 @@ import 'dart:convert';
 import 'package:fluro/fluro.dart';
 import 'package:flutter_demo01/example/base/base_gridview_shimmer_test_page.dart';
 import 'package:flutter_demo01/example/base/base_listview_shimmer_test_page.dart';
+import 'package:flutter_demo01/example/base/base_refresh_view_header_fixed_page.dart';
+import 'package:flutter_demo01/example/base/base_refresh_view_header_follow_page.dart';
 import 'package:flutter_demo01/example/base/base_refresh_view_test_page.dart';
 import 'package:flutter_demo01/example/socket_test.dart';
 import 'package:flutter_demo01/example/theme_test.dart';
@@ -30,5 +32,7 @@ class ExampleRouter implements IRouterProvider {
     }));
     router.define('BaseListViewShimmerTestPage', handler: Handler(handlerFunc: (_, __) => const BaseListViewShimmerTestPage()));
     router.define('BaseGridViewShimmerTestPage', handler: Handler(handlerFunc: (_, __) => const BaseGridViewShimmerTestPage()));
+    router.define('BaseRefreshViewHeaderFixedPage', handler: Handler(handlerFunc: (_, __) => const BaseRefreshViewHeaderFixedPage()));
+    router.define('BaseRefreshViewHeaderFollowPage', handler: Handler(handlerFunc: (_, __) => const BaseRefreshViewHeaderFollowPage()));
   }
 }

@@ -13,6 +13,8 @@ final List titleData = [
   'BaseGridView',
   'BaseGridView - 骨架屏',
   'BaseListView - 骨架屏',
+  'BaseRefreshView - header/footer固定',
+  'BaseRefreshView - header/footer跟随',
 ];
 
 final List routeData = [
@@ -24,6 +26,8 @@ final List routeData = [
   'BaseRefreshViewTestPage',
   'BaseGridViewShimmerTestPage',
   'BaseListViewShimmerTestPage',
+  'BaseRefreshViewHeaderFixedPage',
+  'BaseRefreshViewHeaderFollowPage',
 ];
 
 class HomePage extends StatelessWidget {
