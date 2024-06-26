@@ -3,6 +3,8 @@
 import 'dart:convert';
 import 'package:fluro/fluro.dart';
 import 'package:flutter_demo01/example/base/base_gridview_shimmer_test_page.dart';
+import 'package:flutter_demo01/example/base/base_listview_shimmer_test_page.dart';
+import 'package:flutter_demo01/example/base/base_refresh_view_test_page.dart';
 import 'package:flutter_demo01/example/socket_test.dart';
 import 'package:flutter_demo01/example/theme_test.dart';
 import 'package:flutter_demo01/routes/router_init.dart';
@@ -22,6 +24,11 @@ class ExampleRouter implements IRouterProvider {
     router.define('SocketTestPage', handler: Handler(handlerFunc: (_, __) => const SocketTestPage()));
 
     // base
+    router.define('BaseRefreshViewTestPage', handler: Handler(handlerFunc: (_, params) {
+      var jumpParams = params['jumpParams']!.first;
+      return BaseRefreshViewTestPage(jsonDecode(jumpParams));
+    }));
+    router.define('BaseListViewShimmerTestPage', handler: Handler(handlerFunc: (_, __) => const BaseListViewShimmerTestPage()));
     router.define('BaseGridViewShimmerTestPage', handler: Handler(handlerFunc: (_, __) => const BaseGridViewShimmerTestPage()));
   }
 }

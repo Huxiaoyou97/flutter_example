@@ -9,7 +9,10 @@ final List titleData = [
   '网络请求',
   '主题设置',
   'Socket',
+  'BaseListView',
+  'BaseGridView',
   'BaseGridView - 骨架屏',
+  'BaseListView - 骨架屏',
 ];
 
 final List routeData = [
@@ -17,7 +20,10 @@ final List routeData = [
   'HttpTestPage',
   'ThemeTestPage',
   'SocketTestPage',
+  'BaseRefreshViewTestPage',
+  'BaseRefreshViewTestPage',
   'BaseGridViewShimmerTestPage',
+  'BaseListViewShimmerTestPage',
 ];
 
 class HomePage extends StatelessWidget {
@@ -30,7 +36,14 @@ class HomePage extends StatelessWidget {
       body: XbTextList(
         dataArr: titleData,
         callBack: (index, str) {
-          XbNavUtils.pushNamed(context, routeData[index]);
+          if (index == 4 || index == 5) {
+            /// 页面参数传递的例子
+            var jumpParams = {'isGridView': index == 5 ? true : false};
+            XbNavUtils.pushNamed(context, routeData[index],
+                arguments: jumpParams);
+          } else {
+            XbNavUtils.pushNamed(context, routeData[index]);
+          }
         },
       ),
     );
