@@ -15,6 +15,8 @@ class XbSocketUtils {
   bool _isReconnecting = false;
   final Duration heartbeatInterval;
   final Duration reconnectInterval;
+  final int maxReconnectAttempts;
+  int _reconnectAttempts = 0;
   OnMessageCallback? onMessage;
   bool _isDisconnecting = false;
 
@@ -22,17 +24,20 @@ class XbSocketUtils {
     required this.url,
     this.heartbeatInterval = const Duration(seconds: 5),
     this.reconnectInterval = const Duration(seconds: 10),
+    this.maxReconnectAttempts = 10,
   });
 
   static XbSocketUtils getInstance({
     required String url,
     Duration heartbeatInterval = const Duration(seconds: 5),
     Duration reconnectInterval = const Duration(seconds: 10),
+    int maxReconnectAttempts = 10,
   }) {
     _instance ??= XbSocketUtils._internal(
       url: url,
       heartbeatInterval: heartbeatInterval,
       reconnectInterval: reconnectInterval,
+      maxReconnectAttempts: maxReconnectAttempts,
     );
     return _instance!;
   }
@@ -49,6 +54,7 @@ class XbSocketUtils {
 
     _channel?.stream.listen(
       (message) {
+        _reconnectAttempts = 0; // 重置重连次数
         _onMessage(message);
       },
       onDone: _onDone,
@@ -104,6 +110,9 @@ class XbSocketUtils {
   /// 开始发送心跳包
   void _startHeartbeat() {
     _heartbeatTimer?.cancel();
+
+    // 不是连接状态,不需要发送心跳包
+    if (!_isConnected) return;
     _heartbeatTimer = Timer.periodic(heartbeatInterval, (timer) {
       print("触发 ping $_heartbeatTimer --- $_isConnected");
       if (_isConnected) {
@@ -127,7 +136,14 @@ class XbSocketUtils {
   /// 尝试重连
   void _reconnect() {
     if (_isReconnecting) return;
+    if (_reconnectAttempts >= maxReconnectAttempts) {
+      // print("达到最大重连次数，不再尝试重连");
+      _reconnectTimer?.cancel();
+      _heartbeatTimer?.cancel();
+      return;
+    }
     _isReconnecting = true;
+    _reconnectAttempts++;
 
     _reconnectTimer = Timer.periodic(reconnectInterval, (timer) {
       if (_isConnected) {

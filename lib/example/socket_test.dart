@@ -13,7 +13,7 @@ class SocketTestPage extends WebSocketBasePage {
 
 class _SocketTestPageState extends State<SocketTestPage> with WebSocketMixin {
   @override
-  String get socketUrl => 'wss://'; // WebSocket地址
+  String get socketUrl => 'wss://www.socket.com'; // WebSocket地址
 
   @override
   Widget build(BuildContext context) {
