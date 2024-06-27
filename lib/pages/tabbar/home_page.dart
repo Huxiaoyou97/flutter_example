@@ -30,6 +30,7 @@ final List titleData = [
   'ListViewTest3',
   'ListViewTest4',
   'ListViewTest5',
+  'WebView百度',
 ];
 
 final List routeData = [
@@ -58,6 +59,7 @@ final List routeData = [
   'ListViewTest3',
   'ListViewTest4',
   'ListViewTest5',
+  'WebView',
 ];
 
 class HomePage extends StatelessWidget {
@@ -70,6 +72,12 @@ class HomePage extends StatelessWidget {
       body: XbTextList(
         dataArr: titleData,
         callBack: (index, str) {
+          if (str == "WebView百度") {
+            XbNavUtils.jumpWebViewPage(context, '百度', 'https://www.baidu.com');
+
+            return;
+          }
+
           if (index == 3 || index == 4) {
             /// 页面参数传递的例子
             var jumpParams = {'isGridView': index == 4 ? true : false};
