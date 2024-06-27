@@ -12,13 +12,13 @@ import '../provider/theme_provider.dart';
 extension ThemeExtension on BuildContext {
   // bool get jhIsDark => Theme.of(this).brightness == Brightness.dark;
 
-  bool get jhIsDark => Provider.of<ThemeProvider>(this).isDark(this);
+  bool get xbIsDark => Provider.of<ThemeProvider>(this).isDark(this);
 }
 
 class KColors {
   /// 设置动态颜色
   static Color dynamicColor(BuildContext context, Color lightColor, [Color? darkColor]) {
-    var isDark = context.jhIsDark;
+    var isDark = context.xbIsDark;
     return isDark ? darkColor ?? lightColor : lightColor;
   }
 

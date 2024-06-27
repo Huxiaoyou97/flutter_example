@@ -20,6 +20,11 @@ final List titleData = [
   'Dialog',
   '级联选择器（多维数组结构数据）',
   '级联选择器（树形结构数据、支持搜索）',
+  'GridViewTest1',
+  'GridViewTest2',
+  'GridViewTest3',
+  'GridViewTest4',
+  'GridViewTest5',
 ];
 
 final List routeData = [
@@ -38,6 +43,11 @@ final List routeData = [
   'DialogTestPage',
   'CascadePickerTest',
   'CascadeTreePickerTest',
+  'GridViewTest1',
+  'GridViewTest2',
+  'GridViewTest3',
+  'GridViewTest4',
+  'GridViewTest5',
 ];
 
 class HomePage extends StatelessWidget {

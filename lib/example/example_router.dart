@@ -12,6 +12,11 @@ import 'package:flutter_demo01/example/base/base_listview_shimmer_test_page.dart
 import 'package:flutter_demo01/example/base/base_refresh_view_header_fixed_page.dart';
 import 'package:flutter_demo01/example/base/base_refresh_view_header_follow_page.dart';
 import 'package:flutter_demo01/example/base/base_refresh_view_test_page.dart';
+import 'package:flutter_demo01/example/gridView/gridview_test1.dart';
+import 'package:flutter_demo01/example/gridView/gridview_test2.dart';
+import 'package:flutter_demo01/example/gridView/gridview_test3.dart';
+import 'package:flutter_demo01/example/gridView/gridview_test4.dart';
+import 'package:flutter_demo01/example/gridView/gridview_test5.dart';
 import 'package:flutter_demo01/example/socket_test.dart';
 import 'package:flutter_demo01/example/theme_test.dart';
 import 'package:flutter_demo01/routes/router_init.dart';
@@ -46,5 +51,12 @@ class ExampleRouter implements IRouterProvider {
     router.define('DialogTestPage', handler: Handler(handlerFunc: (_, __) => const DialogTestPage()));
     router.define('CascadePickerTest', handler: Handler(handlerFunc: (_, __) => const CascadePickerTest()));
     router.define('CascadeTreePickerTest', handler: Handler(handlerFunc: (_, __) => const CascadeTreePickerTest()));
+
+    // GridView
+    router.define('GridViewTest1', handler: Handler(handlerFunc: (_, __) => const GridViewTest1()));
+    router.define('GridViewTest2', handler: Handler(handlerFunc: (_, __) => const GridViewTest2()));
+    router.define('GridViewTest3', handler: Handler(handlerFunc: (_, __) => const GridViewTest3()));
+    router.define('GridViewTest4', handler: Handler(handlerFunc: (_, __) => const GridViewTest4()));
+    router.define('GridViewTest5', handler: Handler(handlerFunc: (_, __) => const GridViewTest5()));
   }
 }

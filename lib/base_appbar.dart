@@ -162,7 +162,7 @@ class _BaseAppBarState extends State<BaseAppBar> {
 
     // TODO: 通过ThemeProvider进行主题管理
     final provider = Provider.of<ThemeProvider>(context);
-    final bool isDark = context.jhIsDark;
+    final bool isDark = context.xbIsDark;
     // 设置的颜色优先级高于暗黑模式
     bgColor = widget.bgColor ?? (isDark ? _bgDarkColor : provider.getThemeColor());
     if (isDark) {
