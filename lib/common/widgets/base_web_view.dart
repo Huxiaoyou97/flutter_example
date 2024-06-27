@@ -82,9 +82,9 @@ class _BaseWebViewState extends State<BaseWebView> {
                 value: _progressValue / 100,
                 backgroundColor: Colors.transparent,
                 minHeight: 2,
-              )
+              ) // 显示进度条
             else
-              const SizedBox.shrink(),
+              const SizedBox.shrink(), // 隐藏进度条
           ],
         ),
       ),
