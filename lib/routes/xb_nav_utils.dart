@@ -20,7 +20,7 @@ enum JumpType {
 /// 路由跳转工具类
 class XbNavUtils {
   /// 跳转
-  static void pushNamed(BuildContext context, String routeName, {Object? arguments, transition = JumpType.native}) {
+  static void pushNamed(BuildContext context, String routeName, {Object? arguments, transition = JumpType.left}) {
     var path = routeName;
     // 对象或对象数组传值可以通过arguments字段进行传值，然后在router.define那里处理、设置页面接收
     if (arguments != null) {
@@ -87,7 +87,7 @@ class XbNavUtils {
 /// fluro的路由跳转工具类
 class _NavFluroUtils {
   static void push(BuildContext context, String path,
-      {bool replace = false, bool clearStack = false, transition = TransitionType.native}) {
+      {bool replace = false, bool clearStack = false, transition = TransitionType.inFromRight}) {
     unFocus();
     Routes.router.navigateTo(context, path, replace: replace, clearStack: clearStack, transition: transition);
   }
@@ -96,7 +96,7 @@ class _NavFluroUtils {
       {bool replace = false, bool clearStack = false}) {
     unFocus();
     Routes.router
-        .navigateTo(context, path, replace: replace, clearStack: clearStack, transition: TransitionType.native)
+        .navigateTo(context, path, replace: replace, clearStack: clearStack, transition: TransitionType.inFromRight)
         .then((Object? result) {
       // 页面返回result为null
       if (result == null) {
