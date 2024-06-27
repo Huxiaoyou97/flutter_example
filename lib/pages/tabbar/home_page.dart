@@ -25,6 +25,11 @@ final List titleData = [
   'GridViewTest3',
   'GridViewTest4',
   'GridViewTest5',
+  'ListViewTest1',
+  'ListViewTest2',
+  'ListViewTest3',
+  'ListViewTest4',
+  'ListViewTest5',
 ];
 
 final List routeData = [
@@ -48,6 +53,11 @@ final List routeData = [
   'GridViewTest3',
   'GridViewTest4',
   'GridViewTest5',
+  'ListViewTest1',
+  'ListViewTest2',
+  'ListViewTest3',
+  'ListViewTest4',
+  'ListViewTest5',
 ];
 
 class HomePage extends StatelessWidget {

@@ -17,6 +17,11 @@ import 'package:flutter_demo01/example/gridView/gridview_test2.dart';
 import 'package:flutter_demo01/example/gridView/gridview_test3.dart';
 import 'package:flutter_demo01/example/gridView/gridview_test4.dart';
 import 'package:flutter_demo01/example/gridView/gridview_test5.dart';
+import 'package:flutter_demo01/example/listView/listview_test.dart';
+import 'package:flutter_demo01/example/listView/listview_test2.dart';
+import 'package:flutter_demo01/example/listView/listview_test3.dart';
+import 'package:flutter_demo01/example/listView/listview_test4.dart';
+import 'package:flutter_demo01/example/listView/listview_test5.dart';
 import 'package:flutter_demo01/example/socket_test.dart';
 import 'package:flutter_demo01/example/theme_test.dart';
 import 'package:flutter_demo01/routes/router_init.dart';
@@ -58,5 +63,12 @@ class ExampleRouter implements IRouterProvider {
     router.define('GridViewTest3', handler: Handler(handlerFunc: (_, __) => const GridViewTest3()));
     router.define('GridViewTest4', handler: Handler(handlerFunc: (_, __) => const GridViewTest4()));
     router.define('GridViewTest5', handler: Handler(handlerFunc: (_, __) => const GridViewTest5()));
+
+    // ListView
+    router.define('ListViewTest1', handler: Handler(handlerFunc: (_, __) => const ListViewTest()));
+    router.define('ListViewTest2', handler: Handler(handlerFunc: (_, __) => const ListViewTest2()));
+    router.define('ListViewTest3', handler: Handler(handlerFunc: (_, __) => const ListViewTest3()));
+    router.define('ListViewTest4', handler: Handler(handlerFunc: (_, __) => const ListViewTest4()));
+    router.define('ListViewTest5', handler: Handler(handlerFunc: (_, __) => const ListViewTest5()));
   }
 }
