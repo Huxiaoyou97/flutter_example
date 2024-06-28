@@ -24,6 +24,12 @@ import 'package:flutter_demo01/example/listView/listview_test4.dart';
 import 'package:flutter_demo01/example/listView/listview_test5.dart';
 import 'package:flutter_demo01/example/listView/listview_test_card.dart';
 import 'package:flutter_demo01/example/listView/listview_test_custom_vc.dart';
+import 'package:flutter_demo01/example/route_test_page/pass_value_page.dart';
+import 'package:flutter_demo01/example/route_test_page/pass_value_page2.dart';
+import 'package:flutter_demo01/example/route_test_page/pass_value_page3.dart';
+import 'package:flutter_demo01/example/route_test_page/route_demo_list_page.dart';
+import 'package:flutter_demo01/example/route_test_page/route_test_page1.dart';
+import 'package:flutter_demo01/example/route_test_page/route_test_page2.dart';
 import 'package:flutter_demo01/example/socket_test.dart';
 import 'package:flutter_demo01/example/theme_test.dart';
 import 'package:flutter_demo01/routes/router_init.dart';
@@ -75,5 +81,15 @@ class ExampleRouter implements IRouterProvider {
     router.define('ListViewTestCard', handler: Handler(handlerFunc: (_, __) => const ListViewTestCard()));
     router.define('ListViewTestCustomVC', handler: Handler(handlerFunc: (_, __) => const ListViewTestCustomVC()));
 
+    // 路由
+    router.define('RouteDemoListPage', handler: Handler(handlerFunc: (_, __) => const RouteDemoListPage()));
+    router.define('PassValuePage', handler: Handler(handlerFunc: (_, __) => const PassValuePage()));
+    router.define('PassValuePage2', handler: Handler(handlerFunc: (_, params) {
+      var jumpParams = params['jumpParams']!.first;
+      return PassValuePage2(jsonDecode(jumpParams));
+    }));
+    router.define('PassValuePage3', handler: Handler(handlerFunc: (_, __) => const PassValuePage3()));
+    router.define('RouteTestPage1', handler: Handler(handlerFunc: (_, __) => const RouteTestPage1()));
+    router.define('RouteTestPage2', handler: Handler(handlerFunc: (_, __) => const RouteTestPage2()));
   }
 }
