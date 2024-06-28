@@ -28,6 +28,7 @@ import 'package:flutter_demo01/example/listView/listview_test4.dart';
 import 'package:flutter_demo01/example/listView/listview_test5.dart';
 import 'package:flutter_demo01/example/listView/listview_test_card.dart';
 import 'package:flutter_demo01/example/listView/listview_test_custom_vc.dart';
+import 'package:flutter_demo01/example/locale_page.dart';
 import 'package:flutter_demo01/example/other/permission_test.dart';
 import 'package:flutter_demo01/example/other/sideslip_test_page.dart';
 import 'package:flutter_demo01/example/route_test_page/pass_value_page.dart';
@@ -107,5 +108,6 @@ class ExampleRouter implements IRouterProvider {
     // 其他
     router.define('SideslipTestPage', handler: Handler(handlerFunc: (_, __) => const SideslipTestPage()));
     router.define('PermissionTestPage', handler: Handler(handlerFunc: (_, __) => const PermissionTestPage()));
+    router.define('LocalePage', handler: Handler(handlerFunc: (_, __) => const LocalePage()));
   }
 }

@@ -7,6 +7,7 @@ import 'package:flutter_demo01/routes/xb_nav_utils.dart';
 final List titleData = [
   '网络请求',
   '主题设置',
+  '多语言设置',
   'Socket',
   'BaseListView',
   'BaseGridView',
@@ -42,6 +43,7 @@ final List titleData = [
 final List routeData = [
   'HttpTestPage',
   'ThemeTestPage',
+  'LocalePage',
   'SocketTestPage',
   'BaseRefreshViewTestPage',
   'BaseRefreshViewTestPage',
@@ -90,9 +92,9 @@ class HomePage extends StatelessWidget {
             return;
           }
 
-          if (index == 3 || index == 4) {
+          if (index == 4 || index == 5) {
             /// 页面参数传递的例子
-            var jumpParams = {'isGridView': index == 4 ? true : false};
+            var jumpParams = {'isGridView': index == 5 ? true : false};
             XbNavUtils.pushNamed(context, routeData[index],
                 arguments: jumpParams);
           } else {

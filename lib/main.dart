@@ -8,6 +8,7 @@ import 'package:flutter_demo01/common/utils/xb_status_bar_utils.dart';
 import 'package:flutter_demo01/common/utils/xb_storage_utils.dart';
 import 'package:flutter_demo01/http/http_utils.dart';
 import 'package:flutter_demo01/http/log_utils.dart';
+import 'package:flutter_demo01/intl/intl_config.dart';
 import 'package:flutter_demo01/pages/login/login_page.dart';
 import 'package:flutter_demo01/provider/socket_provider.dart';
 import 'package:flutter_demo01/provider/theme_provider.dart';
@@ -137,7 +138,7 @@ class _MyAppState extends State<MyApp> {
       locale: LocaleUtils.currentLocale,
       fallbackLocale: LocaleUtils.fallbackLocale,
       supportedLocales: LocaleUtils.supportedLocales,
-      // translations: LangTranslations(),
+      translations: LangTranslations(),
       builder: (BuildContext context, Widget? child) {
         XbScreenUtils.init(context);
 

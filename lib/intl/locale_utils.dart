@@ -6,11 +6,9 @@ import 'dart:ui';
 import 'package:flutter_demo01/common/utils/xb_storage_utils.dart';
 import 'package:get/get.dart';
 
-
 const String _appLocaleKey = 'AppLocale';
 const Locale chineseLocale = Locale('zh', 'CN');
 const Locale englishLocale = Locale('en', 'US');
-
 
 class LocaleUtils {
   /// 获取系统语言
@@ -29,7 +27,9 @@ class LocaleUtils {
   /// 获取当前语言
   static Locale? get currentLocale {
     final String localeMode = getLocaleMode();
-    var locale = getLocaleList().firstWhere((item) => item['localeMode'] == localeMode, orElse: () => null);
+    var locale = getLocaleList().firstWhere(
+        (item) => item['localeMode'] == localeMode,
+        orElse: () => null);
     if (locale != null) {
       return locale['value'];
     }
@@ -41,7 +41,9 @@ class LocaleUtils {
   /// 设置语言
   static void setLocale(String localeMode) {
     XbAESStorageUtils.saveString(_appLocaleKey, localeMode);
-    var locale = getLocaleList().firstWhere((item) => item['localeMode'] == localeMode, orElse: () => null);
+    var locale = getLocaleList().firstWhere(
+        (item) => item['localeMode'] == localeMode,
+        orElse: () => null);
     if (locale != null) {
       // Get.updateLocale(Locale('zh', 'CN'));
       // Get.updateLocale(Locale('en', 'US'));
@@ -53,8 +55,22 @@ class LocaleUtils {
   static List getLocaleList() {
     return [
       {'label': '跟随系统', 'value': deviceLocale, 'localeMode': 'system'},
-      {'label': '简体中文', 'value': const Locale('zh', 'CN'), 'localeMode': 'zhCN'},
-      {'label': 'English', 'value': const Locale('en', 'US'), 'localeMode': 'enUS'},
+      {
+        'label': '简体中文',
+        'value': const Locale('zh', 'CN'),
+        'localeMode': 'zhCN'
+      },
+      {
+        'label': 'English',
+        'value': const Locale('en', 'US'),
+        'localeMode': 'enUS'
+      },
+      // 印度
+      {
+        'label': 'हिंदी',
+        'value': const Locale('hi', 'IN'),
+        'localeMode': 'hiIN'
+      },
     ];
   }
 
