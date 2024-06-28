@@ -30,6 +30,8 @@ final List titleData = [
   'ListViewTest3',
   'ListViewTest4',
   'ListViewTest5',
+  'ListViewTestCard',
+  'ListViewTestCustomVC',
   'WebView百度',
 ];
 
@@ -59,6 +61,8 @@ final List routeData = [
   'ListViewTest3',
   'ListViewTest4',
   'ListViewTest5',
+  'ListViewTestCard',
+  'ListViewTestCustomVC',
   'WebView',
 ];
 

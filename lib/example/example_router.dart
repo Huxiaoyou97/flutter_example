@@ -22,6 +22,8 @@ import 'package:flutter_demo01/example/listView/listview_test2.dart';
 import 'package:flutter_demo01/example/listView/listview_test3.dart';
 import 'package:flutter_demo01/example/listView/listview_test4.dart';
 import 'package:flutter_demo01/example/listView/listview_test5.dart';
+import 'package:flutter_demo01/example/listView/listview_test_card.dart';
+import 'package:flutter_demo01/example/listView/listview_test_custom_vc.dart';
 import 'package:flutter_demo01/example/socket_test.dart';
 import 'package:flutter_demo01/example/theme_test.dart';
 import 'package:flutter_demo01/routes/router_init.dart';
@@ -70,5 +72,8 @@ class ExampleRouter implements IRouterProvider {
     router.define('ListViewTest3', handler: Handler(handlerFunc: (_, __) => const ListViewTest3()));
     router.define('ListViewTest4', handler: Handler(handlerFunc: (_, __) => const ListViewTest4()));
     router.define('ListViewTest5', handler: Handler(handlerFunc: (_, __) => const ListViewTest5()));
+    router.define('ListViewTestCard', handler: Handler(handlerFunc: (_, __) => const ListViewTestCard()));
+    router.define('ListViewTestCustomVC', handler: Handler(handlerFunc: (_, __) => const ListViewTestCustomVC()));
+
   }
 }
