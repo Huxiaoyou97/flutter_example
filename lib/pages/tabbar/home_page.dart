@@ -33,6 +33,7 @@ final List titleData = [
   'ListViewTestCard',
   'ListViewTestCustomVC',
   '路由相关',
+  '功能组件',
   'WebView百度',
 ];
 
@@ -65,6 +66,7 @@ final List routeData = [
   'ListViewTestCard',
   'ListViewTestCustomVC',
   'RouteDemoListPage',
+  'ComponentDemoListPage',
   'WebView',
 ];
 

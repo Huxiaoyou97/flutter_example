@@ -17,7 +17,7 @@ List getData() {
     map['content'] =
         '这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容';
     map['phone'] = '$i$i$i' 'xxxxxxx';
-    map['imageUrl'] = 'https://gitee.com/iotjh/Picture/raw/master/lufei.png';
+    map['imageUrl'] = 'https://img1.baidu.com/it/u=1023452347,2490968251&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=500';
     dataArr.add(map);
   }
 

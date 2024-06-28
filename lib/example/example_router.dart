@@ -12,6 +12,10 @@ import 'package:flutter_demo01/example/base/base_listview_shimmer_test_page.dart
 import 'package:flutter_demo01/example/base/base_refresh_view_header_fixed_page.dart';
 import 'package:flutter_demo01/example/base/base_refresh_view_header_follow_page.dart';
 import 'package:flutter_demo01/example/base/base_refresh_view_test_page.dart';
+import 'package:flutter_demo01/example/components/collapse_view_test_page.dart';
+import 'package:flutter_demo01/example/components/component_demo_list_page.dart';
+import 'package:flutter_demo01/example/components/slide_menu_test_page.dart';
+import 'package:flutter_demo01/example/components/tag_view_test_page.dart';
 import 'package:flutter_demo01/example/gridView/gridview_test1.dart';
 import 'package:flutter_demo01/example/gridView/gridview_test2.dart';
 import 'package:flutter_demo01/example/gridView/gridview_test3.dart';
@@ -91,5 +95,11 @@ class ExampleRouter implements IRouterProvider {
     router.define('PassValuePage3', handler: Handler(handlerFunc: (_, __) => const PassValuePage3()));
     router.define('RouteTestPage1', handler: Handler(handlerFunc: (_, __) => const RouteTestPage1()));
     router.define('RouteTestPage2', handler: Handler(handlerFunc: (_, __) => const RouteTestPage2()));
+
+    // 功能组件
+    router.define('ComponentDemoListPage', handler: Handler(handlerFunc: (_, __) => const ComponentDemoListPage()));
+    router.define('SlideMenuTestPage', handler: Handler(handlerFunc: (_, __) => const SlideMenuTestPage()));
+    router.define('TagViewTestPage', handler: Handler(handlerFunc: (_, __) => const TagViewTestPage()));
+    router.define('CollapseViewTestPage', handler: Handler(handlerFunc: (_, __) => const CollapseViewTestPage()));
   }
 }
