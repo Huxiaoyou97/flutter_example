@@ -67,6 +67,14 @@ dependencies:
   date_format: ^2.0.7
   # 图片手势 https://pub.flutter-io.cn/packages/photo_view
   photo_view: ^0.14.0
+  # 侧滑删除 https://pub.flutter-io.cn/packages/flutter_slidable
+  flutter_slidable: ^3.1.0
+  # 城市选择列表 https://pub.flutter-io.cn/packages/azlistview
+  azlistview: ^2.0.0
+  # 获取安卓iOS设备信息 https://pub.flutter-io.cn/packages/device_info_plus
+  device_info_plus: ^9.1.2
+  # 手机权限 https://pub.flutter-io.cn/packages/permission_handler
+  permission_handler: ^11.3.1
 
 dev_dependencies:
   flutter_test:

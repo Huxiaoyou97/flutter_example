@@ -34,6 +34,8 @@ final List titleData = [
   'ListViewTestCustomVC',
   '路由相关',
   '功能组件',
+  '列表侧滑',
+  '权限相关',
   'WebView百度',
 ];
 
@@ -67,6 +69,8 @@ final List routeData = [
   'ListViewTestCustomVC',
   'RouteDemoListPage',
   'ComponentDemoListPage',
+  'SideslipTestPage',
+  'PermissionTestPage',
   'WebView',
 ];
 
